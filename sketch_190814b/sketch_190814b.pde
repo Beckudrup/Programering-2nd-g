@@ -1,11 +1,7 @@
 float xpos;
 float ypos;
-float stoerelse;
-float hoejreOeje;
-float venstreOeje;
-float mund;
-float venstre;
-float hoejre;
+
+
 
 void setup() {
   size(2000,1000);
@@ -13,32 +9,37 @@ void setup() {
   
   xpos = 510;
   ypos = 75;
-  stoerelse = 5;
+ 
 }
 
 void draw() {
-xpos*= 2;
-  ypos*= 2;
-  stoerelse*= 1;
-  hoejreOeje*=0.2;
-  venstreOeje*=0.189;
-  mund*=0.5;
-  venstre*=1.5;
-  hoejre*=1.5;
+xpos+= 1;
+  ypos+= 1;
+ 
   
   clear();
     background(255, 204, 0);
     
-//Ansigt
-circle(xpos, ypos+75, stoerelse+245);
- //Mund
-  circle(xpos, ypos+75, mund+95);
+    stroke(23);
+    
+   //Venstre øje
+circle(xpos-100, ypos-50, 100);
+  circle(xpos-100, ypos-50, 50);
+
   //Højre øje
-  circle(xpos+40, hoejre+120.5,  hoejreOeje+18);
-  //Venstre øje
-  circle(xpos-30, venstre+120.5,  venstreOeje+25);
+  circle(xpos+100, ypos-50, 100);
+  circle(xpos+100, ypos-50, 50);
+    
+//1st lag
+circle(xpos, ypos+75, 250);
+//Mund
+fill (126);
+  circle(xpos, ypos+125, 50);
+ //2nd lag
+ circle(xpos, ypos+50, 100);
+  circle(xpos+0, ypos+50, 150);
+circle(xpos, ypos+50, 100);
+circle(xpos, ypos+50, 50);
 
 
-  
-  
 }
