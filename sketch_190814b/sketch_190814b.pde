@@ -17,14 +17,14 @@ void setup() {
 }
 
 void draw() {
-xpos+= 2;
-  ypos+= 2;
-  stoerelse+= 1;
-  hoejreOeje+=0.2;
-  venstreOeje+=0.189;
-  mund+=0.5;
-  venstre+=1.5;
-  hoejre+=1.5;
+xpos*= 2;
+  ypos*= 2;
+  stoerelse*= 1;
+  hoejreOeje*=0.2;
+  venstreOeje*=0.189;
+  mund*=0.5;
+  venstre*=1.5;
+  hoejre*=1.5;
   
   clear();
     background(255, 204, 0);
