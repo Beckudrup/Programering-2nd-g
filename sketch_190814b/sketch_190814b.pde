@@ -49,7 +49,7 @@ fill (126);
 circle(xpos, ypos+50, 100);
 circle(xpos, ypos+50, 50);
 
-// sleep ting
+// Gang art
 delay(50);
 
 }
