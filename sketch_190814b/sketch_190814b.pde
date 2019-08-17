@@ -1,5 +1,6 @@
 float xpos;
 float ypos;
+int trappe = 0;
 
 
 
@@ -13,8 +14,15 @@ void setup() {
 }
 
 void draw() {
-xpos+= 1;
-  ypos+= 1;
+  if (trappe == 0){
+xpos+= 5;
+trappe = 1;
+  } else {
+  ypos +=5;
+  trappe =0;
+  }
+  
+
  
   
   clear();
@@ -41,5 +49,7 @@ fill (126);
 circle(xpos, ypos+50, 100);
 circle(xpos, ypos+50, 50);
 
+// sleep ting
+delay(50);
 
 }
