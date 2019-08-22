@@ -3,10 +3,11 @@ float y=500;
 float xSpeed=12;
 float ySpeed =10;
 float KasseX, KasseY, KasseSize =1000;
-
+PImage img;
 
 void setup() {
   size(1000, 1000);
+  img =loadImage ("Gigaclaps.jpg");
 } 
 
 void draw() {
@@ -18,6 +19,10 @@ void draw() {
 
 
   clear();
+  
+  //Flot anime baggrund (Ved godt vi ikke skriver i Java Script)
+  background(img);
+
 
   //Firkant
   rect(KasseX, KasseY, KasseSize, KasseSize);
