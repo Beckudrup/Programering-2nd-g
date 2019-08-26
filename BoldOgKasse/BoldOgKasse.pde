@@ -3,26 +3,19 @@ float y=500;
 float xSpeed=12;
 float ySpeed =10;
 float KasseX, KasseY, KasseSize =1000;
-PImage img;
-
 void setup() {
   size(1000, 1000);
-  img =loadImage ("Gigaclaps.jpg");
 } 
 
 void draw() {
+  //De her gør så kasssen langsomt går ned af mens den bliver mindre op mod venstre hjørne
   KasseSize-=0.5;
   KasseY+=0.25;
   KasseX+=0.25;
   x=x+xSpeed;
   y=y+ySpeed;
 
-
   clear();
-  
-  //Flot anime baggrund (Ved godt vi ikke skriver i Java Script)
-  background(img);
-
 
   //Firkant
   rect(KasseX, KasseY, KasseSize, KasseSize);
