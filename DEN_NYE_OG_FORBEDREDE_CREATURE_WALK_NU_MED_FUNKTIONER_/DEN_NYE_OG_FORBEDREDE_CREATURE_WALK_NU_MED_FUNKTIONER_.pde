@@ -1,7 +1,7 @@
 float xpos;
 float ypos;
 int trappe = 0;
-
+float s = 1;
 void setup() {
   size(2000, 1000);
 
@@ -13,40 +13,41 @@ void setup() {
 void draw() {
   clear();
   gangart();
-  Krop(xpos+500, ypos+100);
-  Krop(xpos+100, ypos+250);
-  Krop(xpos+250, ypos+250);
-  Krop(xpos+750, ypos+500);
-  Krop(xpos+500, ypos+800);
-  Krop(xpos+1000, ypos+800);
-  Krop(xpos+100, ypos+800);
-  Krop(xpos+100, ypos+500);
-  Krop(xpos+1000, ypos+500);
-  Krop(xpos+1000, ypos+800);
-  Krop(xpos+1000, ypos+100);
+  s=s+0.01;
+  Krop(xpos+500, ypos,s);
+  Krop(xpos+100, ypos,s);
+  Krop(xpos+250, ypos,s);
+  Krop(xpos+750, ypos,s);
+  Krop(xpos+500, ypos,s);
+  Krop(xpos+1000, ypos,s);
+  Krop(xpos+100, ypos,s);
+  Krop(xpos+100, ypos,s);
+  Krop(xpos+1000, ypos,s);
+  Krop(xpos+1000, ypos,s);
+  Krop(xpos+1000, ypos,s);
 }
 
-void Krop(float xin, float yin) {
+void Krop(float xin, float yin, float s) {
   stroke(23);
 
   //Venstre øje
-  circle(xin-100, yin-50, 100);
-  circle(xin-100, yin-50, 50);
+  circle(xin-100*s, yin-50*s, 100*s);
+  circle(xin-100*s, yin-50*s, 50*s);
 
   //Højre øje
-  circle(xin+100, yin-50, 100);
-  circle(xin+100, yin-50, 50);
+  circle(xin+100*s, yin-50*s, 100*s);
+  circle(xin+100*s, yin-50*s, 50*s);
 
   //1st lag
-  circle(xin, yin+75, 250);
+  circle(xin, yin+75*s, 250*s);
   //Mund
   fill (126);
-  circle(xin, yin+125, 50);
+  circle(xin, yin+125*s, 50*s);
   //2nd lag
-  circle(xin, yin+50, 100);
-  circle(xin+0, yin+50, 150);
-  circle(xin, yin+50, 100);
-  circle(xin, yin+50, 50);
+  circle(xin, yin+50*s, 100*s);
+  circle(xin, yin+50*s, 150*s);
+  circle(xin, yin+50*s, 100*s);
+  circle(xin, yin+50*s, 50*s);
 }
 
 void gangart() {
