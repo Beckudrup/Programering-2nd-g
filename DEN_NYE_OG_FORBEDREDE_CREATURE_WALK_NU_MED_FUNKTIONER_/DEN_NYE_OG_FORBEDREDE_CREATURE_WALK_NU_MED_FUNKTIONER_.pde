@@ -2,29 +2,31 @@ float xpos;
 float ypos;
 int trappe = 0;
 float s = 1;
+float s2 = 1;
 void setup() {
   size(2000, 1000);
 
 
-  xpos = 510;
+  xpos = 10;
   ypos = 75;
 }
 
 void draw() {
   clear();
   gangart();
-  s=s+0.01;
-  Krop(xpos+500, ypos,s);
-  Krop(xpos+100, ypos,s);
-  Krop(xpos+250, ypos,s);
-  Krop(xpos+750, ypos,s);
-  Krop(xpos+500, ypos,s);
-  Krop(xpos+1000, ypos,s);
-  Krop(xpos+100, ypos,s);
-  Krop(xpos+100, ypos,s);
-  Krop(xpos+1000, ypos,s);
-  Krop(xpos+1000, ypos,s);
-  Krop(xpos+1000, ypos,s);
+  s=s*1.001;
+  s2=s2*0.9;
+  Krop(xpos+500, ypos,s); 
+  Krop(xpos+400, ypos,s); 
+  Krop(xpos+250, ypos,s); 
+  Krop(xpos+750, ypos,s); 
+  Krop(xpos+600, ypos,s); 
+  Krop(xpos+1000, ypos,s); 
+  Krop(xpos+850, ypos,s2);
+  Krop(xpos+100, ypos,s2); 
+  Krop(xpos+1200, ypos,s2); 
+  Krop(xpos+1000, ypos,s2); 
+  Krop(xpos+0, ypos,s2); 
 }
 
 void Krop(float xin, float yin, float s) {
